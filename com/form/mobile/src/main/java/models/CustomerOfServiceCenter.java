@@ -7,12 +7,12 @@ public class CustomerOfServiceCenter extends Employee implements ITakeDeviceToRe
 
     @Override
     public TicketOfServiceCenter takeDeviceToRepair(DeviceOfServiceCenter device) {
-        return null;
+        return TicketOfServiceCenter;
     }
 
     @Override
     public DeviceOfServiceCenter getDeviceFromRepair(TicketOfServiceCenter ticket) {
-        return null;
+        return DeviceOfServiceCenter;
     }
 
     @Override
