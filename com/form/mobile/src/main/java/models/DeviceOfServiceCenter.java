@@ -4,16 +4,14 @@ public class DeviceOfServiceCenter {
     private String serialNumber;
     private String model;
     private String nomination;
-    private String price;
-    private String manufacturedDate;
+    private String manufacturer;
     private String countOfRepair;
 
-    public DeviceOfServiceCenter(String serialNumber, String model, String nomination, String price, String manufacturedDate, String countOfRepair) {
+    public DeviceOfServiceCenter(String serialNumber, String model, String nomination, String manufacturer, String countOfRepair) {
         this.serialNumber = serialNumber;
         this.model = model;
         this.nomination = nomination;
-        this.price = price;
-        this.manufacturedDate = manufacturedDate;
+        this.manufacturer = manufacturer;
         this.countOfRepair = countOfRepair;
     }
 
@@ -41,20 +39,12 @@ public class DeviceOfServiceCenter {
         this.nomination = nomination;
     }
 
-    public String getPrice() {
-        return price;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getManufacturedDate() {
-        return manufacturedDate;
-    }
-
-    public void setManufacturedDate(String manufacturedDate) {
-        this.manufacturedDate = manufacturedDate;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     public String getCountOfRepair() {

@@ -1,6 +1,6 @@
 package models;
 
-public abstract  class Employee {
+public abstract class Employee {
     private String workPlace;
     private String position;
     private String arrivalDate;

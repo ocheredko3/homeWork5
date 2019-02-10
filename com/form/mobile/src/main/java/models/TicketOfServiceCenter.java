@@ -2,26 +2,39 @@ package models;
 
 public class TicketOfServiceCenter {
     String ticketID;
-    String adminOfServiceCenter;
-    String engineerOfServiceCenter;
     String customerOfServiceCenter;
     String dateOfIncomeDevice;
     String dateOfOutDevice;
     String deviceOfServiceCenter;
     double priceOfRepair;
-    String deviceWarehouse;
+    String curentDeviceWarehouse;
+    String curentStatusOfRepair;
 
-    public TicketOfServiceCenter(String ticketID, String adminOfServiceCenter, String engineerOfServiceCenter, String customerOfServiceCenter, String dateOfIncomeDevice,
-                                 String dateOfOutDevice, String deviceOfServiceCenter, double priceOfRepair, String deviceWarehouse) {
+    enum statusOfRepair {
+        OPEN,
+        IN_PROGRESS,
+        WAIT_PARTS,
+        REPAIRED,
+        ISSUED
+
+    }
+
+    enum deviceWarehouse {
+        INCOMING_RECEPTION_WAREHOUSE,
+        ENGINEER_WAREHOUSE,
+        OUTCOMING_RECEPTION_WAREHOUSE
+    }
+
+    public TicketOfServiceCenter(String ticketID, String customerOfServiceCenter, String dateOfIncomeDevice, String dateOfOutDevice,
+                                 String deviceOfServiceCenter, double priceOfRepair, String curentDeviceWarehouse, String curentStatusOfRepair) {
         this.ticketID = ticketID;
-        this.adminOfServiceCenter = adminOfServiceCenter;
-        this.engineerOfServiceCenter = engineerOfServiceCenter;
         this.customerOfServiceCenter = customerOfServiceCenter;
         this.dateOfIncomeDevice = dateOfIncomeDevice;
         this.dateOfOutDevice = dateOfOutDevice;
         this.deviceOfServiceCenter = deviceOfServiceCenter;
         this.priceOfRepair = priceOfRepair;
-        this.deviceWarehouse = deviceWarehouse;
+        this.curentDeviceWarehouse = curentDeviceWarehouse;
+        this.curentStatusOfRepair = curentStatusOfRepair;
     }
 
     public String getTicketID() {
@@ -30,22 +43,6 @@ public class TicketOfServiceCenter {
 
     public void setTicketID(String ticketID) {
         this.ticketID = ticketID;
-    }
-
-    public String getAdminOfServiceCenter() {
-        return adminOfServiceCenter;
-    }
-
-    public void setAdminOfServiceCenter(String adminOfServiceCenter) {
-        this.adminOfServiceCenter = adminOfServiceCenter;
-    }
-
-    public String getEngineerOfServiceCenter() {
-        return engineerOfServiceCenter;
-    }
-
-    public void setEngineerOfServiceCenter(String engineerOfServiceCenter) {
-        this.engineerOfServiceCenter = engineerOfServiceCenter;
     }
 
     public String getCustomerOfServiceCenter() {
@@ -88,11 +85,19 @@ public class TicketOfServiceCenter {
         this.priceOfRepair = priceOfRepair;
     }
 
-    public String getDeviceWarehouse() {
-        return deviceWarehouse;
+    public String getCurentDeviceWarehouse() {
+        return curentDeviceWarehouse;
     }
 
-    public void setDeviceWarehouse(String deviceWarehouse) {
-        this.deviceWarehouse = deviceWarehouse;
+    public void setCurentDeviceWarehouse(String curentDeviceWarehouse) {
+        this.curentDeviceWarehouse = curentDeviceWarehouse;
+    }
+
+    public String getCurentStatusOfRepair() {
+        return curentStatusOfRepair;
+    }
+
+    public void setCurentStatusOfRepair(String curentStatusOfRepair) {
+        this.curentStatusOfRepair = curentStatusOfRepair;
     }
 }
